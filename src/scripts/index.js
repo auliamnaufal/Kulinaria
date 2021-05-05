@@ -32,7 +32,7 @@ data.restaurants.forEach((restaurant) => {
         class="restaurant__item--img"
     />
     <div class="restaurant__item--title">
-        <h3><a href="#">${restaurant.name}</a></h3>
+        <a href="#">${restaurant.name}</a>
         <p>${restaurant.city}</p>
     </div>
     <div class="restaurant__item--content">

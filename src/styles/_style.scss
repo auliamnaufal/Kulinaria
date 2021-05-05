@@ -324,14 +324,12 @@
         padding: 0.4rem 2rem 1.1rem;
         background: rgba(255, 211, 105, 0.71);
 
-        h3 {
-          a {
-            text-decoration: none;
-            font-weight: 600;
-            color: $color-secondary;
-            font-size: 3rem;
-            line-height: 1.2;
-          }
+        a {
+          text-decoration: none;
+          font-weight: 600;
+          color: $color-secondary;
+          font-size: 3rem;
+          line-height: 1.2;
         }
 
         p {
