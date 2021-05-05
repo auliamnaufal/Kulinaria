@@ -21,6 +21,28 @@ mainElement.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
-// data.restaurants.forEach((restaurant) => {
-//   document.querySelector(".coba").innerHTML = `<h1>${restaurant.name}</h1>`;
-// });
+data.restaurants.forEach((restaurant) => {
+  document.querySelector(".restaurant__list").innerHTML += `
+    <div class="restaurant__item">
+    <div class="overlay"></div>
+
+    <img
+        src="${restaurant.pictureId}"
+        alt="${restaurant.name} image"
+        class="restaurant__item--img"
+    />
+    <div class="restaurant__item--title">
+        <h3><a href="#">${restaurant.name}</a></h3>
+        <p>${restaurant.city}</p>
+    </div>
+    <div class="restaurant__item--content">
+        <p class="desc">
+        ${restaurant.description}
+        </p>
+        <p class="rating">
+        <span class="fa fa-star checked"></span>
+        ${restaurant.rating}
+        </p>
+    </div>
+    </div>`;
+});

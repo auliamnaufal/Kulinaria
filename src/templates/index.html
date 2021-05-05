@@ -9,11 +9,17 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Restaurant Apps Starter Project</title>
   </head>
   <body>
+    <a href="#maincontent" class="skip-link" tabindex="1">Menuju ke konten</a>
+
     <header class="header">
-      <a class="header__toggle activate" id="menu">☰</a>
+      <button class="header__toggle activate" id="menu">☰</button>
     </header>
 
     <nav id="drawer" class="nav">
@@ -41,6 +47,49 @@
       </div>
     </div>
 
-    <main></main>
+    <main id="maincontent">
+      <section class="specialty">
+        <div class="specialty__content">
+          <h2 class="specialty__content--title">our specialty</h2>
+          <div class="gallery">
+            <div class="gallery__item">
+              <img
+                src="./icon/chef gear hat 1.svg"
+                alt="icon chef hat"
+                class="gallery__item--icon"
+              />
+              <p class="gallery__item--title">The best chef</p>
+            </div>
+
+            <div class="gallery__item">
+              <img
+                src="./icon/house chimney 1.svg"
+                alt="icon chimney house"
+                class="gallery__item--icon"
+              />
+              <p class="gallery__item--title" tabindex="0">Convenient place</p>
+            </div>
+
+            <div class="gallery__item">
+              <img
+                src="./icon/vegetables broccoli.svg"
+                alt="icon organic vegetables"
+                class="gallery__item--icon"
+              />
+              <p class="gallery__item--title">Organic Food</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="restaurant">
+        <h2 class="restaurant__title">our list of restaurant</h2>
+        <div class="restaurant__list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Copyright © 2021 - Kulinaria Apps</p>
+    </footer>
   </body>
 </html>
