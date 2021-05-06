@@ -234,7 +234,7 @@
 
       &__item {
         background-color: $color-tertiary;
-        box-shadow: 1px 2px 4px 0px rgba(255, 211, 105, 0.44);
+        box-shadow: 1px 2px 4px 0px rgba(255, 211, 105, 0.5);
         border-radius: 5px;
         display: flex;
         justify-content: center;
@@ -242,9 +242,8 @@
         flex-direction: column;
         padding: 2.5rem 0;
 
-        &--icon {
-          width: 4rem;
-          height: 4rem;
+        .icon {
+          font-size: 4rem;
           margin-bottom: 0.8rem;
         }
 
