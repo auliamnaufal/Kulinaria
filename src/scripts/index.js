@@ -24,7 +24,6 @@ mainElement.addEventListener("click", (e) => {
 data.restaurants.forEach((restaurant) => {
   document.querySelector(".restaurant__list").innerHTML += `
     <div class="restaurant__item">
-    <div class="overlay"></div>
 
     <img
         src="${restaurant.pictureId}"

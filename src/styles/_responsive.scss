@@ -4,7 +4,7 @@
   }
 }
 
-@media screen and (min-width: 646px) {
+@media screen and (min-width: 665px) {
   .specialty {
     min-height: 50rem;
     padding: 0;
@@ -32,19 +32,12 @@
 @media screen and (min-width: 940px) {
   .header {
     &__toggle {
-      font-size: 4rem;
-      position: fixed;
-      width: 5.5rem;
-      height: 5.5rem;
-      padding: 0.5rem;
-      text-align: center;
-      z-index: 2000;
+      font-size: 3.5rem;
+      width: 5rem;
+      height: 5rem;
+      padding: 0.4rem;
       top: 2rem;
-      right: 2.5rem;
-      border-radius: 50%;
-      transition: all 0.2s ease-in;
-      cursor: pointer;
-      border: none;
+      right: 4rem;
     }
   }
 
