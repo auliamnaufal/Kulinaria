@@ -1,5 +1,7 @@
 import "regenerator-runtime"; /* for async await transpile */
 
+import './components/hero-section'
+import './components/specialty-section'
 import './components/footer';
 
 import "../styles/main.scss";
