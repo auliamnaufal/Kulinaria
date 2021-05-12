@@ -27,7 +27,7 @@ data.restaurants.forEach((restaurant) => {
 
     <img
         src="${restaurant.pictureId}"
-        alt="${restaurant.name} image"
+        alt="${restaurant.name}     "
         class="restaurant__item--img"
     />
     <div class="restaurant__item--title">
@@ -45,3 +45,16 @@ data.restaurants.forEach((restaurant) => {
     </div>
     </div>`;
 });
+
+if (screen.width >= 850) {
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("drawer").style.top = "0";
+    } else {
+      document.getElementById("drawer").style.top = "-10rem";
+    }
+    prevScrollpos = currentScrollPos;
+  };
+}
