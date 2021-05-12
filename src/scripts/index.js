@@ -1,4 +1,7 @@
 import "regenerator-runtime"; /* for async await transpile */
+
+import './components/footer';
+
 import "../styles/main.scss";
 
 import data from "../DATA.json";
@@ -48,6 +51,7 @@ data.restaurants.forEach((restaurant) => {
 
 if (screen.width >= 850) {
   var prevScrollpos = window.pageYOffset;
+  document.getElementById("drawer").style.top = "-10rem";
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
