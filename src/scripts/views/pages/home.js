@@ -1,8 +1,8 @@
-import data from "../../../DATA.json";
+import data from '../../../DATA.json';
 
 const Home = {
-    async render() {
-      return `
+  async render() {
+    return `
         <hero-section></hero-section>
 
         <specialty-section></specialty-section>
@@ -12,11 +12,11 @@ const Home = {
             <div class="restaurant__list"></div>
         </section>
       `;
-    },
-   
-    async afterRender() {
-        data.restaurants.forEach((restaurant) => {
-            document.querySelector(".restaurant__list").innerHTML += `
+  },
+
+  async afterRender() {
+    data.restaurants.forEach((restaurant) => {
+      document.querySelector('.restaurant__list').innerHTML += `
               <div class="restaurant__item">
           
               <img
@@ -38,8 +38,8 @@ const Home = {
                   </p>
               </div>
               </div>`;
-          });
-    },
-  };
-   
-  export default Home;
+    });
+  },
+};
+
+export default Home;

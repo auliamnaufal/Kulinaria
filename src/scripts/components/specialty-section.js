@@ -1,10 +1,10 @@
 class SpecialtySection extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
         <section class="specialty">
             <div class="specialty__content">
                 <h2 class="specialty__content--title">our specialty</h2>
@@ -26,8 +26,8 @@ class SpecialtySection extends HTMLElement {
                 </div>
             </div>
         </section>
-        `
-    }
+        `;
+  }
 }
 
-customElements.define("specialty-section", SpecialtySection);
+customElements.define('specialty-section', SpecialtySection);
