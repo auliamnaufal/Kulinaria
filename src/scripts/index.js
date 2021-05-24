@@ -6,25 +6,19 @@ import './components/footer';
 
 import "../styles/main.scss";
 
+import App from './views/app'
+
 import data from "../DATA.json";
 
 const drawerElement = document.querySelector("#drawer");
 const menuElement = document.querySelector("#menu");
 const mainElement = document.querySelector("main");
 
-menuElement.addEventListener("click", (e) => {
-  drawerElement.classList.toggle("open");
-  menuElement.classList.toggle("n-activate");
-  menuElement.classList.toggle("activate");
-  e.stopPropagation();
-});
-
-mainElement.addEventListener("click", (e) => {
-  drawerElement.classList.remove("open");
-  menuElement.classList.remove("n-activate");
-  menuElement.classList.add("activate");
-  e.stopPropagation();
-});
+const app = new App({
+  button: document.querySelector("#menu"),
+  drawer: document.querySelector("#drawer"),
+  content: document.querySelector("main"),
+})
 
 data.restaurants.forEach((restaurant) => {
   document.querySelector(".restaurant__list").innerHTML += `
