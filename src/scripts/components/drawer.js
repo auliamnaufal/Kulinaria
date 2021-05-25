@@ -11,17 +11,17 @@ class DrawerBar extends HTMLElement {
 
     <ul class="nav__list">
       <li class="nav__item">
-        <a href="#/">home</a>
+        <a href="#/">beranda</a>
       </li>
       <li class="nav__item">
-        <a href="#/favorite">favorite</a>
+        <a href="#/favorite">favorit</a>
       </li>
       <li class="nav__item">
         <a
           href="https://github.com/auliamnaufal"
           target="_blank"
           rel="noreferrer"
-          >about us</a
+          >Tentang kami</a
         >
       </li>
     </ul>

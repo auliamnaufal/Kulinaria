@@ -8,8 +8,8 @@ class HeroSection extends HTMLElement {
         <div class="hero">
             <div class="hero__content">
                 <h1 class="hero__content--title">Kulinaria</h1>
-                <p class="hero__content--text">a place where you found cheerfulness</p>
-                <button class="hero__content--btn">Read More</button>
+                <p class="hero__content--text">Tempat di mana Anda menemukan keceriaan</p>
+                <button class="hero__content--btn">Baca selengkapnya</button>
             </div>
         </div>
         `;

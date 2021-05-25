@@ -9,7 +9,7 @@ const Home = {
         <specialty-section></specialty-section>
 
         <section class="restaurant">
-            <h2 class="restaurant__title">our list of restaurant</h2>
+            <h2 class="restaurant__title">Daftar Restoran Kami</h2>
             <div class="restaurant__list"></div>
         </section>
       `;
