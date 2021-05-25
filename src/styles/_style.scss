@@ -554,7 +554,7 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
   justify-content: center;
   flex-direction: column;
   padding: 0 1.5rem;
-  margin: 3rem 0 7rem;
+  margin: 3rem 0 4rem;
 
 
   &__heading {
@@ -573,7 +573,7 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
     width: 100%;
     margin: auto;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid rgba(45, 50, 57, 0.262);
     box-shadow: 0 3px 10px rgba(0, 64, 124, 0.365);
   }

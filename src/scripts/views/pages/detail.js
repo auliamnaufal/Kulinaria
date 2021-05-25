@@ -7,11 +7,11 @@ const Detail = {
           alt="Kafe fita"
           class="detail__img"
         />
-        <h2 class="detail__heading">Kafe fita</h2>
+        <h2 class="detail__heading container">Kafe fita</h2>
       </section>
 
-      <section id="info">
-        <div class="detail__info container">
+      <section id="info"  class="container">
+        <div class="detail__info">
           <div class="detail__info__rating">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,19 +61,23 @@ const Detail = {
 
       <section id="menulist">
         <div class="menulist container">
-          <h2>List of Foods</h2>
-          <ul>
-            <li>Ikan teri dan roti</li>
-            <li>bebek crepes</li>
-            <li>kari kacang dan telur</li>
-          </ul>
+          <div>
+            <h2>List of Foods</h2>
+            <ul>
+              <li>Ikan teri dan roti</li>
+              <li>bebek crepes</li>
+              <li>kari kacang dan telur</li>
+            </ul>
+          </div>
         
-          <h2>List of Drinks</h2>
-          <ul>
-            <li>Ikan teri dan roti</li>
-            <li>bebek crepes</li>
-            <li>kari kacang dan telur</li>
-          </ul>
+          <div>
+            <h2>List of Drinks</h2>
+            <ul>
+              <li>Ikan teri dan roti</li>
+              <li>bebek crepes</li>
+              <li>kari kacang dan telur</li>
+            </ul>
+          </div>
         </div>
       </section>
 

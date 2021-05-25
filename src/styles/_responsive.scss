@@ -99,6 +99,104 @@
       }
     }
   }
+
+
+  .container {
+    margin-left: 4rem;
+  }
+  
+  .detail__img {
+    height: 50vh;
+    margin-top: 10rem;
+  }
+  
+  .detail__info {
+    grid-gap: 1.2rem 3rem;
+
+  
+    &__rating {
+      grid-template-columns: 3rem 1fr;
+      grid-gap: 0.5rem;
+  
+      svg {
+        width: 30px;
+      }
+  
+      p {
+        font-size: 2.5rem;
+      }
+    }
+  
+    &__location {
+      grid-template-columns: 2.2rem 1fr;
+      grid-gap: .6rem;
+  
+      svg {
+        width: 30px;
+      }
+  
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  
+    &__paraghraph {
+      grid-column: 1 / 3;
+      font-size: 1.7rem;
+      color: $color-secondary;
+    }
+  }
+  
+  .menulist {
+    margin-top: 3rem;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+  
+  .review {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  
+    &__heading {
+      font-size: 2.5rem;
+      color: $color-secondary;
+      font-weight: 600;
+    }
+  
+    &__list {
+      margin-top: 1rem;
+  
+      .review__item {
+        min-height: 13rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+        background: linear-gradient(90deg, $color-primary 1rem, #fff 1rem);
+        padding: 0 0 0 2rem;
+  
+        &__name {
+          font-weight: 500;
+          font-size: 2rem;
+          color: $color-secondary;
+        }
+  
+        &__review {
+          font-size: 1.8rem;
+          color: $color-secondary;
+        }
+  
+        &__date {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+
+
 }
 
 @media screen and (min-width: 940px) {
