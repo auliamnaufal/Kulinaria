@@ -14,7 +14,7 @@ class DrawerBar extends HTMLElement {
         <a href="#/">home</a>
       </li>
       <li class="nav__item">
-        <a href="./detail.html">favorite</a>
+        <a href="#/favorite">favorite</a>
       </li>
       <li class="nav__item">
         <a
