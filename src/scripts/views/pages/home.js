@@ -1,4 +1,5 @@
 import data from '../../../DATA.json';
+import KulinariaDataSource from '../../data/dataSource';
 
 const Home = {
   async render() {
@@ -39,6 +40,9 @@ const Home = {
               </div>
               </div>`;
     });
+
+    const restaurant = await KulinariaDataSource.listResto();
+    console.log(restaurant);
   },
 };
 
