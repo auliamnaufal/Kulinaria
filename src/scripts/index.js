@@ -26,5 +26,3 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });
-
-// TODO: Create Service worker using workbox, manifest.json
