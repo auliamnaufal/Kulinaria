@@ -1,5 +1,6 @@
 import KulinariaDataSource from '../../data/dataSource';
 import { createRestoItemTemplate } from '../templates/template-creator';
+import Preloader from '../../utils/loader-initiator';
 
 const Home = {
   async render() {
@@ -16,8 +17,12 @@ const Home = {
   },
 
   async afterRender() {
+    Preloader.displayPreloader();
+
     const restaurants = await KulinariaDataSource.listResto();
     const restaurantContainer = document.querySelector('.restaurant__list');
+
+    Preloader.removePreloader();
     restaurants.restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestoItemTemplate(restaurant);
     });
