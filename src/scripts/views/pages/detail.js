@@ -7,6 +7,7 @@ import {
   createReviewListTemplate,
 } from '../templates/template-creator';
 import Scroll from '../../utils/scroll';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -60,6 +61,8 @@ const Detail = {
           </div>
         </div>
       </section>
+
+      <div id="likeButtonContainer"></div>
     `;
   },
 
@@ -92,7 +95,13 @@ const Detail = {
     restaurant.restaurant.customerReviews.forEach((review) => {
       reviewContainer.innerHTML += createReviewListTemplate(review);
     });
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      resto: restaurant.restaurant,
+    });
   },
+
 };
 
 export default Detail;

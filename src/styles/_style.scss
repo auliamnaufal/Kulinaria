@@ -606,4 +606,34 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
   }
 }
 
+/*
+   Like
+*/
+.btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 16px;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-secondary;
 
+
+  &__like {
+    svg {
+      fill: #fff;
+    } 
+  }
+
+  &__liked {
+
+    svg {
+      fill: $color-primary;
+    }
+  }
+}
