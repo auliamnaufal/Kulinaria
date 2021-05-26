@@ -23,16 +23,21 @@
     <title>Kulinaria</title>
   </head>
   <body>
-    <a href="#maincontent" class="skip-link">Menuju ke konten</a>
-
-    <header class="header">
-      <button class="header__toggle activate" id="menu">☰</button>
-    </header>
-
-    <drawer-bar></drawer-bar>
-    <div class="preloader"></div>
-    <main id="maincontent"></main>
-
-    <footer-bar></footer-bar>
+    <div id="page-container">
+      <div id="content-wrap">
+        <a href="#maincontent" class="skip-link">Menuju ke konten</a>
+        
+        <header class="header">
+          <button class="header__toggle activate" id="menu">☰</button>
+        </header>
+        
+        <drawer-bar></drawer-bar>
+        <div class="preloader"></div>
+        <main id="maincontent"></main>
+      </div>
+  
+      <footer-bar></footer-bar>
+    </div>
+    
   </body>
 </html>
