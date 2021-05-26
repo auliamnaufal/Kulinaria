@@ -161,9 +161,15 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
     left: 40%;
     transform: translate(-50%, -50%);
 
-    &--title {
+    h1 {
       font-weight: 700;
       font-size: 4.6rem;
+      color: $color-primary;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 4rem;
       color: $color-primary;
     }
 

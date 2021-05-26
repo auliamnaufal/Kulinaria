@@ -4,7 +4,12 @@ import { createRestoItemTemplate } from '../templates/template-creator';
 const Favorite = {
   async render() {
     return `
-      <hero-section></hero-section>
+      <div class="hero">
+        <div class="hero__content">
+            <h2 class="hero__content--title">Favorit Restoran</h2>
+            <p class="hero__content--text">Restoran-Restoran Favorit Anda</p>
+        </div>
+      </div>
 
       <section class="restaurant">
         <div class="restaurant__list"></div>
