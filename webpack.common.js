@@ -52,20 +52,35 @@ module.exports = {
     new WebpackPwaManifest({
       name: 'Kulinaria',
       short_name: 'Kulinaria',
-      description: 'My awesome Progressive Web App!',
+      description: 'Aplikasi Web katalog restoran',
+      display: 'standalone',
       background_color: '#ffffff',
+      theme_color: '#ffd369',
       crossorigin: 'use-credentials',
+      orientation: 'portrait',
+      start_url: '/index.html',
+      inject: true,
+      fingerprints: true,
+      ios: true,
+      includeDirectory: true,
+
       icons: [
         {
-          src: path.resolve('src/public/images/KulinariaFavicon.png'),
-          sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+          src: path.resolve(__dirname, 'src/public/images/KulinariaFavicon.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+          type: 'image/png',
+          purpose: 'any maskable',
+          destination: path.join('icons', 'ios'),
+          ios: true,
         },
         {
-          src: path.resolve('src/public/images/KulinariaFavicon.png'),
-          size: '1024x1024', // you can also use the specifications pattern
+          src: path.resolve(__dirname, 'src/public/images/KulinariaFavicon.png'),
+          size: '1024x1024',
+          destination: path.join('icons', 'ios'),
+          ios: 'startup',
         },
         {
-          src: path.resolve('src/public/images/KulinariaFavicon.png'),
+          src: path.resolve(__dirname, 'src/public/images/KulinariaFavicon.png'),
           size: '1024x1024',
           purpose: 'maskable',
         },
