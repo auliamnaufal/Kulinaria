@@ -1,7 +1,7 @@
 {
-  "name": "restaurant-apps",
+  "name": "kulinaria",
   "version": "1.0.0",
-  "description": "",
+  "description": "Restaurant Catalogue from around Indonesia",
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
@@ -10,7 +10,7 @@
     "test": "karma start"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "Naufal Aulia auliamnaufal@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -21,6 +21,7 @@
     "eslint": "^7.27.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.3",
+    "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.3.0",
     "jasmine-ajax": "^4.0.0",
