@@ -3,6 +3,7 @@ import UrlParser from '../../routes/url-parser';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import Scroll from '../../utils/scroll';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import Preloader from '../../utils/loader-initiator';
 
 const Detail = {
   async render() {
@@ -17,11 +18,14 @@ const Detail = {
 
   async afterRender() {
     Scroll.toTop();
+    Preloader.displayPreloader();
 
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await KulinariaDataSource.detailResto(url.id);
 
     const restaurantContainer = document.querySelector('#detail');
+
+    Preloader.removePreloader();
 
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant.restaurant);
 

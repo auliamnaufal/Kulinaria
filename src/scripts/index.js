@@ -16,6 +16,7 @@ const app = new App({
   drawer: document.querySelector('#drawer'),
   content: document.querySelector('main'),
   drawerItem: document.querySelector('.nav__item a'),
+  loader: document.querySelector('.preloader'),
 });
 
 window.addEventListener('hashchange', () => {

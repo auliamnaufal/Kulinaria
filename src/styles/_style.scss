@@ -643,3 +643,28 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
     }
   }
 }
+
+/* 
+* Spinner 
+*/
+
+.preloader {
+  .spinner {
+    width: 30px;
+    height: auto;
+    fill: $color-secondary;
+    animation: spinner .7s linear infinite;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
