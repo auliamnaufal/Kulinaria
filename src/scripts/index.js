@@ -9,6 +9,8 @@ import '../styles/main.scss';
 
 import App from './views/app';
 
+import swRegister from './utils/sw-register';
+
 const app = new App({
   button: document.querySelector('#menu'),
   drawer: document.querySelector('#drawer'),
@@ -22,6 +24,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
 
 // TODO: Create Service worker using workbox, manifest.json
