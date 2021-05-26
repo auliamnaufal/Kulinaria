@@ -5,12 +5,13 @@ import { registerRoute } from 'workbox-routing/registerRoute';
 import { StaleWhileRevalidate } from 'workbox-strategies';
 import { ExpirationPlugin } from 'workbox-expiration';
 import { clientsClaim, setCacheNameDetails } from 'workbox-core';
+import CONFIG from './globals/config';
 
 self.skipWaiting();
 clientsClaim();
 
 setCacheNameDetails({
-  prefix: 'Kulinaria_Cache',
+  prefix: CONFIG.CACHE_NAME_PREFIX,
 });
 
 precacheAndRoute(self.__WB_MANIFEST, {
