@@ -23,3 +23,5 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
 });
+
+// TODO: Create Service worker using workbox, manifest.json
