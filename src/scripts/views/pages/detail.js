@@ -1,6 +1,6 @@
 import KulinariaDataSource from '../../data/dataSource';
 import UrlParser from '../../routes/url-parser';
-import { createRestaurantDetailTemplate, createReviewItemTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import Scroll from '../../utils/scroll';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import Preloader from '../../utils/loader-initiator';
@@ -24,7 +24,6 @@ const Detail = {
     const restaurant = await KulinariaDataSource.detailResto(url.id);
 
     const restaurantContainer = document.querySelector('#detail');
-    const reviewContainer = document.querySelector('.review__list');
 
     Preloader.removePreloader();
 
@@ -39,7 +38,6 @@ const Detail = {
       e.preventDefault();
       const reviewerName = document.querySelector('#name');
       const reviewerReview = document.querySelector('#reviews');
-      const date = new Date().toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' });
 
       const reviewData = {
         id: restaurant.restaurant.id,
@@ -55,9 +53,26 @@ const Detail = {
         reviewerName.value = '';
         reviewerReview.value = '';
 
-        reviewContainer.innerHTML += createReviewItemTemplate(reviewData, date);
+        this._renderReview(reviewData.name, reviewData.review);
       }
     });
+  },
+
+  _renderReview(name, review) {
+    const reviewContainer = document.querySelector('.review__list');
+    const date = new Date().toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' });
+
+    const dataReview = `
+      <div class="review__item">
+        <h3 class="review__item__name">${name}</h3>
+        <p class="review__item__review">
+            <q>${review}</q>
+        </p>
+        <p class="review__item__date">${date}</p>
+      </div>
+    `;
+
+    reviewContainer.innerHTML += dataReview;
   },
 
 };
