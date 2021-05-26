@@ -1,6 +1,6 @@
 import KulinariaDataSource from '../../data/dataSource';
 import UrlParser from '../../routes/url-parser';
-import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate, errorMessageTemplate } from '../templates/template-creator';
 import Scroll from '../../utils/scroll';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import Preloader from '../../utils/loader-initiator';
@@ -8,11 +8,10 @@ import Preloader from '../../utils/loader-initiator';
 const Detail = {
   async render() {
     return `
-      <div id="detail"></div>
-
-      
+      <div id="detail"> </div>
 
       <div id="likeButtonContainer"></div>
+      
     `;
   },
 
@@ -26,6 +25,12 @@ const Detail = {
     const restaurantContainer = document.querySelector('#detail');
 
     Preloader.removePreloader();
+
+    if (!restaurant.restaurant) {
+      document.querySelector('.skip-link').innerHTML = '';
+      restaurantContainer.innerHTML = errorMessageTemplate();
+      return;
+    }
 
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant.restaurant);
 

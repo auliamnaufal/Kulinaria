@@ -675,10 +675,20 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
   }
 }
 
-
-
 @keyframes spinner {
   to {
     transform: rotate(360deg);
+  }
+}
+
+.error {
+  margin: 10rem;
+  font-size: 2rem;
+  color: $color-secondary;
+  font-weight: 700;
+  text-align: center;
+
+  a {
+    color: $color-primary;
   }
 }

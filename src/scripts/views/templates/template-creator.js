@@ -152,9 +152,16 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
+const errorMessageTemplate = () => `
+    <h2 class="error">Ada yang tidak beres, coba periksa koneksi Anda dan jika tidak menyelesaikan masalah, coba  
+        <a href="mailto:auliamnaufal@gmail.com">hubungi saya</a>
+    </h2>
+`;
+
 export {
   createRestoItemTemplate,
   createRestaurantDetailTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  errorMessageTemplate,
 };
