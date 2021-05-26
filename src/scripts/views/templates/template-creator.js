@@ -116,6 +116,16 @@ const createRestaurantDetailTemplate = (resto) => `
     
 `;
 
+const createReviewItemTemplate = ({ name, review }, date) => `
+    <div class="review__item">
+        <h3 class="review__item__name">${name}</h3>
+        <p class="review__item__review">
+            <q>${review}</q>
+        </p>
+        <p class="review__item__date">${date}</p>
+    </div>
+`;
+
 const createRestoItemTemplate = (list) => `
     <div class="restaurant__item">
             
@@ -155,6 +165,7 @@ const createLikedButtonTemplate = () => `
 export {
   createRestoItemTemplate,
   createRestaurantDetailTemplate,
+  createReviewItemTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
 };
