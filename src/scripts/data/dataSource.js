@@ -24,6 +24,18 @@ class KulinariaDataSource {
       return error;
     }
   }
+
+  static async addReview({ id, name, review }) {
+    const response = await fetch(API_ENDPOINT.REVIEW, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Auth-Token': '12345',
+      },
+      body: JSON.stringify({ id, name, review }),
+    });
+    return response.json();
+  }
 }
 
 export default KulinariaDataSource;

@@ -49,12 +49,12 @@ const Detail = {
         <div class="form">
           <label for="name">Nama:</label><br />
           <input maxlength="25" type="text" id="name" name="fname" /><br />
-          <label for="desc">Pendapat:</label><br />
+          <label for="review">Pendapat:</label><br />
           <textarea
             maxlength="90"
             type="text"
-            id="desc"
-            name="lname"
+            id="reviews"
+            name="review"
           ></textarea>
           <div class="card-btn">
             <button id="submit"22>Kirim</button>
@@ -99,6 +99,20 @@ const Detail = {
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: restaurant.restaurant,
+    });
+
+    document.querySelector('#submit').addEventListener('click', () => {
+      const reviewerName = document.querySelector('#name');
+      const reviewerReview = document.querySelector('#reviews');
+
+      KulinariaDataSource.addReview({
+        id: restaurant.restaurant.id,
+        name: reviewerName.value,
+        review: reviewerReview.value,
+      });
+
+      reviewerName.value = '';
+      reviewerReview.value = '';
     });
   },
 
