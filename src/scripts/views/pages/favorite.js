@@ -1,5 +1,6 @@
 import FavoriteRestoIdb from '../../data/favoriteResto-idb';
 import { createRestoItemTemplate } from '../templates/template-creator';
+import Preloader from '../../utils/loader-initiator';
 
 const Favorite = {
   async render() {
@@ -18,8 +19,12 @@ const Favorite = {
   },
 
   async afterRender() {
+    Preloader.displayPreloader();
+
     const restaurants = await FavoriteRestoIdb.getAllResto();
     const restaurantsContainer = document.querySelector('.restaurant__list');
+
+    Preloader.removePreloader();
     restaurants.forEach((resto) => {
       restaurantsContainer.innerHTML += createRestoItemTemplate(resto);
     });

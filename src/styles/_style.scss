@@ -665,13 +665,12 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
 
 .preloader {
   .spinner {
-    width: 30px;
-    height: auto;
-    fill: $color-secondary;
+    fill: $color-primary;
     animation: spinner .7s linear infinite;
     position: fixed;
     top: 40%;
     left: 50%;
+    z-index: 99999;
     transform: translate(-50%, -50%);
   }
 }
