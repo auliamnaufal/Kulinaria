@@ -4,10 +4,11 @@
   "description": "Restaurant Catalogue from around Indonesia",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "start-dev": "webpack-dev-server --config webpack.dev.js --host localhost --port 3100",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src --fix",
-    "test": "karma start"
+    "test": "karma start",
+    "posttest": "http-server dist -p 3040"
   },
   "keywords": [],
   "author": "Naufal Aulia auliamnaufal@gmail.com",
@@ -23,6 +24,7 @@
     "eslint-plugin-import": "^2.23.3",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.3.0",
+    "http-server": "^0.12.3",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^3.5.0",
     "karma": "^5.1.0",
