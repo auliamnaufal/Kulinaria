@@ -5,13 +5,15 @@ import Preloader from '../utils/loader-initiator';
 
 class App {
   constructor({
-    button, drawer, content, drawerItem, loader,
+    button, drawer, content, loader, drawerHomeLink,
+    drawerFavoriteLink,
   }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
-    this._drawerItem = drawerItem;
     this._loader = loader;
+    this._drawerHomeLink = drawerHomeLink;
+    this._drawerFavoriteLink = drawerFavoriteLink;
 
     this._initialAppShell();
     this._initalPreloader();
@@ -22,7 +24,8 @@ class App {
       button: this._button,
       drawer: this._drawer,
       content: this._content,
-      drawerItem: this._drawerItem,
+      drawerHomeLink: this._drawerHomeLink,
+      drawerFavoriteLink: this._drawerFavoriteLink,
     });
   }
 

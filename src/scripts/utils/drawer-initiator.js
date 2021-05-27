@@ -3,7 +3,8 @@ const DrawerInitiator = {
     button,
     drawer,
     content,
-    drawerItem,
+    drawerHomeLink,
+    drawerFavoriteLink,
   }) {
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer, button);
@@ -13,7 +14,11 @@ const DrawerInitiator = {
       this._closeDrawer(event, drawer, button);
     });
 
-    drawerItem.addEventListener('click', (event) => {
+    drawerHomeLink.addEventListener('click', (event) => {
+      this._closeDrawer(event, drawer, button);
+    });
+
+    drawerFavoriteLink.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer, button);
     });
   },
@@ -22,6 +27,7 @@ const DrawerInitiator = {
     drawer.classList.toggle('open');
     button.classList.toggle('n-activate');
     button.classList.toggle('activate');
+    console.log('open drawer');
     event.stopPropagation();
   },
 
@@ -29,6 +35,7 @@ const DrawerInitiator = {
     drawer.classList.remove('open');
     button.classList.remove('n-activate');
     button.classList.add('activate');
+    console.log('Close Drawer');
     event.stopPropagation();
   },
 };

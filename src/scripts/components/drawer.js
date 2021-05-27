@@ -10,10 +10,10 @@ class DrawerBar extends HTMLElement {
     <div class="line"></div>
 
     <ul class="nav__list">
-      <li class="nav__item">
+      <li class="nav__item home">
         <a href="#/">beranda</a>
       </li>
-      <li class="nav__item">
+      <li class="nav__item favorite">
         <a href="#/favorite">favorit</a>
       </li>
       <li class="nav__item">
