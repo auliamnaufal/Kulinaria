@@ -1,5 +1,5 @@
 import KulinariaDataSource from '../../data/dataSource';
-import { createRestoItemTemplate } from '../templates/template-creator';
+import { createRestoItemTemplate, errorMessageTemplate } from '../templates/template-creator';
 import Preloader from '../../utils/loader-initiator';
 
 const Home = {
@@ -23,6 +23,12 @@ const Home = {
     const restaurantContainer = document.querySelector('.restaurant__list');
 
     Preloader.removePreloader();
+
+    if (!restaurants.restaurants) {
+      document.querySelector('.skip-link').innerHTML = '';
+      restaurantContainer.innerHTML = errorMessageTemplate();
+      return;
+    }
     restaurants.restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestoItemTemplate(restaurant);
     });

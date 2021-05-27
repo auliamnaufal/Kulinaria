@@ -709,6 +709,7 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
   color: $color-secondary;
   font-weight: 700;
   text-align: center;
+  grid-column: 1 / -1;
 
   a {
     color: $color-primary;
