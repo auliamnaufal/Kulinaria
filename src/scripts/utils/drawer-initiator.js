@@ -27,7 +27,6 @@ const DrawerInitiator = {
     drawer.classList.toggle('open');
     button.classList.toggle('n-activate');
     button.classList.toggle('activate');
-    console.log('open drawer');
     event.stopPropagation();
   },
 
@@ -35,7 +34,6 @@ const DrawerInitiator = {
     drawer.classList.remove('open');
     button.classList.remove('n-activate');
     button.classList.add('activate');
-    console.log('Close Drawer');
     event.stopPropagation();
   },
 };
