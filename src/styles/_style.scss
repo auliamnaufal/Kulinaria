@@ -651,11 +651,15 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
   align-items: center;
   justify-content: center;
   background-color: $color-secondary;
+  transition: all .1s;
 
 
   &__like {
     svg {
-      fill: #fff;
+      fill: transparent;
+      stroke: $color-primary;
+      stroke-width: 3px;
+      stroke-linecap: round
     } 
   }
 
@@ -663,11 +667,15 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
 
     svg {
       fill: $color-primary;
+      stroke: $color-primary;
+      stroke-width: 3px;
+      stroke-linecap: round
     }
   }
 
   &:active {
     background-color: $color-primary;
+    transform: translateY(2px);
   }
 }
 
