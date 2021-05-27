@@ -7,7 +7,7 @@ const Favorite = {
     return `
       <div class="hero">
         <div class="hero__content">
-            <h2 class="hero__content--title">Favorit Restoran</h2>
+            <h2 class="hero__content--title">Restoran Favorit</h2>
             <p class="hero__content--text">Restoran-Restoran Favorit Anda</p>
         </div>
       </div>
@@ -25,9 +25,14 @@ const Favorite = {
     const restaurantsContainer = document.querySelector('.restaurant__list');
 
     Preloader.removePreloader();
-    restaurants.forEach((resto) => {
-      restaurantsContainer.innerHTML += createRestoItemTemplate(resto);
-    });
+
+    if (restaurants.length === 0) {
+      restaurantsContainer.innerHTML = '<h3 class="nofavorite"> Kamu Tidak Restoran Favorit, bisa Tambah <a href="/"> Disini </a> </h3>';
+    } else {
+      restaurants.forEach((resto) => {
+        restaurantsContainer.innerHTML += createRestoItemTemplate(resto);
+      });
+    }
   },
 };
 
