@@ -1,11 +1,11 @@
 var serviceWorkerOption = {
   "assets": [
     "/bundle.js",
-    "/public/images/KulinariaFavicon.png",
-    "/public/images/hero-image_2.jpg",
     "/public/icon/chef gear hat 1.svg",
     "/public/icon/house chimney 1.svg",
     "/public/icon/vegetables broccoli.svg",
+    "/public/images/KulinariaFavicon.png",
+    "/public/images/hero-image_2.jpg",
     "/index.html",
     "/manifest.3988362f8b99d4152f5c622bc861b1de.json",
     "/icon_1024x1024.59198160741599c7a7b8694440b76083.png",
