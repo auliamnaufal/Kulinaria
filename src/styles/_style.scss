@@ -669,12 +669,11 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
   position: fixed;
   display: grid;
   place-content: center center;
-  
+  z-index: -10;
 
   .spinner {
     fill: $color-primary;
     animation: spinner .7s linear infinite;
-    z-index: 99999;
   }
 }
 
