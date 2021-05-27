@@ -27,7 +27,7 @@ const Favorite = {
     Preloader.removePreloader();
 
     if (restaurants.length === 0) {
-      restaurantsContainer.innerHTML = '<h3 class="nofavorite"> Kamu Tidak Restoran Favorit, bisa Tambah <a href="/"> Disini </a> </h3>';
+      restaurantsContainer.innerHTML = '<h3 class="nofavorite"> Kamu Tidak Memiliki Restoran Favorit, bisa Tambah <a href="/"> Disini </a> </h3>';
     } else {
       restaurants.forEach((resto) => {
         restaurantsContainer.innerHTML += createRestoItemTemplate(resto);
