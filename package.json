@@ -4,7 +4,7 @@
   "description": "Restaurant Catalogue from around Indonesia",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js --host localhost --port 3100",
+    "start-dev": "webpack-dev-server --config webpack.dev.js --host localhost --port 3112",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src --fix",
     "test": "karma start",
@@ -47,6 +47,7 @@
   "dependencies": {
     "idb": "^6.1.1",
     "regenerator-runtime": "^0.13.5",
+    "serviceworker-webpack-plugin": "^1.0.1",
     "workbox-core": "^6.1.5",
     "workbox-expiration": "^6.1.5",
     "workbox-precaching": "^6.1.5",
