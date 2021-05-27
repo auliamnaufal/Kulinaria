@@ -35,7 +35,7 @@ class App {
 
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
-    const page = routes[url];
+    const page = url in routes ? routes[url] : routes['/404'];
     this._content.innerHTML = await page.render();
     await page.afterRender();
   }
