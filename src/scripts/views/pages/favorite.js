@@ -1,5 +1,5 @@
 import FavoriteRestoIdb from '../../data/favoriteResto-idb';
-import { createRestoItemTemplate } from '../templates/template-creator';
+import {createRestoItemTemplate} from '../templates/template-creator';
 import Preloader from '../../utils/loader-initiator';
 
 const Favorite = {

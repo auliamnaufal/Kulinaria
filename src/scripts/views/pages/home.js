@@ -1,5 +1,5 @@
 import KulinariaDataSource from '../../data/dataSource';
-import { createRestoItemTemplate, errorMessageTemplate } from '../templates/template-creator';
+import {createRestoItemTemplate, errorMessageTemplate} from '../templates/template-creator';
 import Preloader from '../../utils/loader-initiator';
 
 const Home = {
