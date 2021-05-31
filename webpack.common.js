@@ -53,9 +53,9 @@ module.exports = {
     new WebpackPwaManifest({
       name: 'Kulinaria',
       short_name: 'Kulinaria',
-      description: 'Aplikasi Web katalog restoran',
+      description: 'Aplikasi Web, katalog restoran',
       display: 'standalone',
-      background_color: '#ffffff',
+      background_color: '#fff',
       theme_color: '#ffd369',
       crossorigin: 'use-credentials',
       orientation: 'portrait',
