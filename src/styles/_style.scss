@@ -693,7 +693,7 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
 
   .spinner {
     fill: $color-primary;
-    animation: spinner .7s linear infinite;
+    animation: spinner 2s linear infinite;
   }
 }
 
