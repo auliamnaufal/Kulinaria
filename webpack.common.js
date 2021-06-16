@@ -3,10 +3,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
-const ImageminMozjpeg = require('imagemin-mozjpeg');
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
-
 
 const path = require('path');
 
@@ -53,21 +49,10 @@ module.exports = {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/public'),
           globOptions: {
-            ignore: ['**/heros/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+            ignore: ['**/images/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
           },
         },
       ],
-    }),
-    new ImageminWebpWebpackPlugin({
-      config: [
-        {
-          test: /\.(jpe?g|png)/,
-          options: {
-            quality: 30
-          }
-        }
-      ],
-      overrideExtension: true,
     }),
     new WebpackPwaManifest({
       name: 'Kulinaria',
@@ -86,7 +71,7 @@ module.exports = {
 
       icons: [
         {
-          src: path.resolve(__dirname, 'src/public/images/KulinariaFavicon.png'),
+          src: path.resolve(__dirname, 'src/public/icon/KulinariaFavicon.png'),
           sizes: [96, 128, 192, 256, 384, 512],
           type: 'image/png',
           purpose: 'any maskable',
@@ -94,13 +79,13 @@ module.exports = {
           ios: true,
         },
         {
-          src: path.resolve(__dirname, 'src/public/images/KulinariaFavicon.png'),
+          src: path.resolve(__dirname, 'src/public/icon/KulinariaFavicon.png'),
           size: '1024x1024',
           destination: path.join('icons', 'ios'),
           ios: 'startup',
         },
         {
-          src: path.resolve(__dirname, 'src/public/images/KulinariaFavicon.png'),
+          src: path.resolve(__dirname, 'src/public/icon/KulinariaFavicon.png'),
           size: '1024x1024',
           purpose: 'maskable',
         },
