@@ -14,4 +14,17 @@ describe('Saving a Restaurant', () => {
 		expect(document.querySelector('[aria-label="save this resto"]'))
 			.toBeTruthy();
 	})
+
+	it('should not show saved button when the restaurant has not been saved', async () => {
+		document.body.innerHTML = '<div id="likeButtonContainer"></div>';
+		await LikeButtonInitiator.init({
+			likeButtonContainer: document.querySelector('#likeButtonContainer'),
+			resto: {
+				id: 1,
+			}
+		})
+
+		expect(document.querySelector('[aria-label="unsave this resto"]'))
+			.toBeFalsy();	
+	})
 })
