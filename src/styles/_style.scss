@@ -253,8 +253,8 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
 
         .icon {
           fill: $color-secondary;
-          width: 4rem;
-          height: auto;
+          width: 40px;
+          height: 40px;
           margin-bottom: 0.8rem;
         }
 
@@ -379,7 +379,6 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
 
 #page-container {
   position: relative;
-  min-height: 100vh;
 
   #content-wrap {
     padding-bottom: 2.5rem;    /* Footer height */
