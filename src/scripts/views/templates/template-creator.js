@@ -141,13 +141,13 @@ const createRestoItemTemplate = (list) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="btn btn__like">
+  <button aria-label="save this resto" id="likeButton" class="btn btn__like">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18 24l-6-5.269-6 5.269v-24h12v24z"/></svg>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="btn btn__liked">
+  <button aria-label="unsave this resto" id="likeButton" class="btn btn__liked">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18 24l-6-5.269-6 5.269v-24h12v24z"/></svg>
   </button>
 `;
