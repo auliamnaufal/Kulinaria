@@ -7,6 +7,10 @@ const Favorite = {
   async render() {
     return `
       <div class="hero">
+        <picture class="hero--img">
+          <source media="(max-width: 600px)" type="image/jpg" srcset="./public/images/hero-image_2-small.jpg">
+          <img src="./public/images/hero-image_2-large.jpg" alt="hero image">
+        </picture>
         <div class="hero__content">
             <h2 class="hero__content--title favorite__header">Restoran Favorit</h2>
             <p class="hero__content--text">Restoran-Restoran Favorit Anda</p>

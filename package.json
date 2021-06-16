@@ -4,12 +4,13 @@
   "description": "Restaurant Catalogue from around Indonesia",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "start-dev": "webpack-dev-server --config webpack.dev.js --host localhost --port 8090",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src --fix",
     "test": "karma start",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "viewBuild": "http-server dist -a localhost -p 8000"
   },
   "keywords": [],
   "author": "Naufal Aulia auliamnaufal@gmail.com",

@@ -14,27 +14,12 @@ fs.readdirSync(target)
  
  // mengubah ukuran gambar dengan lebar 800px, dengan prefix -large.jpg
   sharp(`${target}/${image}`)
-		.webp()
-    .resize(800)
-.toFile(path.resolve(__dirname, `${destination}/${image.split('.')
-      .slice(0, -1)
-      .join('.')}-large.webp`));
- 
-
-  sharp(`${target}/${image}`)
     .resize(800)
 .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
       .slice(0, -1)
       .join('.')}-large.jpg`));
 
  // mengubah ukuran gambar dengan lebar 480px, dengan prefix -small.jpg
-  sharp(`${target}/${image}`)
-		.webp()
-    .resize(480)
-.toFile(path.resolve(__dirname, `${destination}/${image.split('.')
-      .slice(0, -1)
-      .join('.')}-small.webp`));
-
   sharp(`${target}/${image}`)
     .resize(480)
 .toFile(path.resolve(__dirname, `${destination}/${image.split('.')

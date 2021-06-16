@@ -6,12 +6,9 @@ class HeroSection extends HTMLElement {
   render() {
     this.innerHTML = `
         <div class="hero">
-        <picture>
-                <source media="(max-width: 600px)" srcset="./public/images/hero-image_2.jpg">
-                <img 
-                    src='./public/images/hero-image_2.jpg' 
-                    alt="Hero image"></img>
-            
+            <picture class="hero--img">
+              <source media="(max-width: 600px)" type="image/jpg" srcset="./public/images/hero-image_2-small.jpg">
+              <img src="./public/images/hero-image_2-large.jpg" alt="hero image">
             </picture>
             <div class="hero__content">
                 <h1 class="hero__content--title">Kulinaria</h1>
