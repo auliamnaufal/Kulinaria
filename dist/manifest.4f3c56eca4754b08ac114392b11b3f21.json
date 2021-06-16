@@ -53,7 +53,7 @@
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "/index.html",
-  "description": "Aplikasi Web katalog restoran",
-  "background_color": "#ffffff",
+  "description": "Aplikasi Web, katalog restoran",
+  "background_color": "#fff",
   "theme_color": "#ffd369"
 }

@@ -2,7 +2,7 @@ import KulinariaDataSource from '../../data/dataSource';
 import UrlParser from '../../routes/url-parser';
 import { createRestaurantDetailTemplate, errorMessageTemplate } from '../templates/template-creator';
 import Scroll from '../../utils/scroll';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonInitiator from '../../utils/like-button-presenter';
 import Preloader from '../../utils/loader-initiator';
 
 const Detail = {

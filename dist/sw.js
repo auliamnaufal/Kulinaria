@@ -7,7 +7,7 @@ var serviceWorkerOption = {
     "/public/icon/house chimney 1.svg",
     "/public/icon/vegetables broccoli.svg",
     "/index.html",
-    "/manifest.3988362f8b99d4152f5c622bc861b1de.json",
+    "/manifest.4f3c56eca4754b08ac114392b11b3f21.json",
     "/icon_1024x1024.59198160741599c7a7b8694440b76083.png",
     "/icons/ios/icon_1024x1024.59198160741599c7a7b8694440b76083.png",
     "/icons/ios/icon_512x512.c3160d233e0f6395efd4eb8f3885e333.png",

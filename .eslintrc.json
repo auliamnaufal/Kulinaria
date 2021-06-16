@@ -18,7 +18,8 @@
         "no-restricted-globals": "off",
         "no-use-before-define": "off",
         "new-cap": "off",
-        "no-alert": "off"
+        "no-alert": "off",
+        "no-undef": "off",
 
     }
 }
