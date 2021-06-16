@@ -109,7 +109,7 @@ const createRestaurantDetailTemplate = (resto) => `
                 name="review"
             ></textarea>
             <div class="card-btn">
-                <button id="submit"22>Kirim</button>
+                <button id="submit">Kirim</button>
             </div>
         </div>
     </section>
