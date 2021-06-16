@@ -3,6 +3,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+
 
 const path = require('path');
 
@@ -50,6 +54,17 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/public'),
         },
       ],
+    }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 30
+          }
+        }
+      ],
+      overrideExtension: true,
     }),
     new WebpackPwaManifest({
       name: 'Kulinaria',
