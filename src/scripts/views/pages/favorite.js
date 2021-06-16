@@ -8,7 +8,7 @@ const Favorite = {
     return `
       <div class="hero">
         <div class="hero__content">
-            <h2 class="hero__content--title">Restoran Favorit</h2>
+            <h2 class="hero__content--title favorite__header">Restoran Favorit</h2>
             <p class="hero__content--text">Restoran-Restoran Favorit Anda</p>
         </div>
       </div>
