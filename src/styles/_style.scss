@@ -252,8 +252,9 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
         padding: 2.5rem 0;
 
         .icon {
-          color: $color-secondary;
-          font-size: 4rem;
+          fill: $color-secondary;
+          width: 4rem;
+          height: auto;
           margin-bottom: 0.8rem;
         }
 
@@ -356,8 +357,16 @@ textarea, input, button, select { font-family: inherit; font-size: inherit; }
         }
 
         .rating {
+          display: flex;
+          justify-content: start;
+          align-items: center;
           font-size: 2rem;
           color: $color-primary;
+
+          svg {
+            margin-right: 1rem;
+            fill: $color-primary;
+          }
         }
       }
     }
