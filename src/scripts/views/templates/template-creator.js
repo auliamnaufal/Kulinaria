@@ -120,9 +120,9 @@ const createRestoItemTemplate = (list) => `
     <div class="restaurant__item">
             
     <img
-        src="${CONFIG.BASE_URL}${CONFIG.IMAGE_URL_SML}${list.pictureId}"
+        data-src="${CONFIG.BASE_URL}${CONFIG.IMAGE_URL_SML}${list.pictureId}"
         alt="${list.name}     "
-        class="restaurant__item--img"
+        class="restaurant__item--img lazyload"
     />
     <div class="restaurant__item--title">
         <a href="#/detail/${list.id}">${list.name}</a>
