@@ -14,7 +14,8 @@ Scenario('Saving restaurant', async ({ I }) => {
   I.see('Kamu Tidak Memiliki Restoran Favorit, bisa Tambah Disini', '.nofavorite');
 
 	I.amOnPage('#/')
-	I.seeElement('.restaurant__item--title a');
+	I.seeElement('.skeleton');
+	I.seeElement('.item')
 
 	const firstResto = locate('.restaurant__item--title a').first();
 	const firstRestoName = await I.grabTextFrom(firstResto)
@@ -35,7 +36,8 @@ Scenario('Unsave restaurant', async ({ I }) => {
   I.see('Kamu Tidak Memiliki Restoran Favorit, bisa Tambah Disini', '.nofavorite');
 
 	I.amOnPage('#/')
-	I.seeElement('.restaurant__item--title a');
+	I.seeElement('.skeleton');
+	I.seeElement('.item')
 
 	const firstResto = locate('.restaurant__item--title a').first();
 	const firstRestoName = await I.grabTextFrom(firstResto)
@@ -63,6 +65,10 @@ Scenario('User Restaurant Review', async ({ I }) => {
 
 	I.amOnPage('#/')
 	I.seeElement('.specialty')
+	
+	I.seeElement('.skeleton');
+	I.seeElement('.item')
+
 	I.click(locate('.restaurant__item--title a').first())
 
 	I.seeElement('.form')
@@ -73,6 +79,8 @@ Scenario('User Restaurant Review', async ({ I }) => {
 
 	I.fillField('#reviews', userReview)
 	I.click('#submit')
+
+	I.see(userReview, '.review__item__review q');
 
 	const lastReview = locate('.review__item__review q').last();
 	const lastReviewText = await I.grabTextFrom(lastReview)

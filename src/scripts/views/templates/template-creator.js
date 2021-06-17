@@ -121,7 +121,7 @@ const createRestoSkeletonItemTemplate = (count) => {
 
     for (let i = 0; i < count; i += 1) {
         template += `
-        <div class="restaurant__item">
+        <div class="restaurant__item skeleton">
             <img
                 src="./public/placeholder/placeholder.png"
                 alt="skeleton"
@@ -144,7 +144,7 @@ const createRestoSkeletonItemTemplate = (count) => {
 }
 
 const createRestoItemTemplate = (list) => `
-    <div class="restaurant__item">
+    <div class="restaurant__item item">
             
     <img
         src="./public/placeholder/placeholder.png"
