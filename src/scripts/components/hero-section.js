@@ -7,7 +7,10 @@ class HeroSection extends HTMLElement {
     this.innerHTML = `
         <div class="hero">
             <picture class="hero--img">
-              <source media="(max-width: 600px)" type="image/jpg" srcset="./public/images/hero-image_2-small.jpg">
+              <source media="(max-width: 600px)" type="image/webp" srcset="./public/images/hero-image_2-small.webp">
+              <source media="(max-width: 600px)" type="image/jpeg" srcset="./public/images/hero-image_2-small.jpg">
+              <source type="image/webp" srcset="./public/images/hero-image_2-large.webp">
+              <source type="image/jpg" srcset="./public/images/hero-image_2-large.jpg">
               <img src="./public/images/hero-image_2-large.jpg" alt="hero image">
             </picture>
             <div class="hero__content">
