@@ -1,5 +1,5 @@
 import KulinariaDataSource from '../../data/dataSource';
-import { createRestoItemTemplate, errorMessageTemplate } from '../templates/template-creator';
+import { createRestoItemTemplate, errorMessageTemplate, createRestoSkeletonItemTemplate } from '../templates/template-creator';
 import Preloader from '../../utils/loader-initiator';
 
 const Home = {
@@ -11,7 +11,9 @@ const Home = {
 
         <section class="restaurant">
             <h2 class="restaurant__title">Daftar Restoran Kami</h2>
-            <div class="restaurant__list"></div>
+            <div class="restaurant__list">
+              ${createRestoSkeletonItemTemplate(10)}
+            </div>
         </section>
       `;
   },
@@ -29,6 +31,8 @@ const Home = {
       restaurantContainer.innerHTML = errorMessageTemplate();
       return;
     }
+
+    restaurantContainer.innerHTML = '';
     restaurants.restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestoItemTemplate(restaurant);
     });
