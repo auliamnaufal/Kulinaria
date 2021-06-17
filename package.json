@@ -4,7 +4,7 @@
   "description": "Restaurant Catalogue from around Indonesia",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config webpack.dev.js --host localhost --port 8090",
+    "start-dev": "webpack-dev-server --config webpack.dev.js --host localhost --port 8080",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src --fix",
     "test": "karma start",
