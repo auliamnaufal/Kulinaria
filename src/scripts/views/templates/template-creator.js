@@ -99,9 +99,9 @@ const createRestaurantDetailTemplate = (resto) => `
     <section class="form">
         <h2 class="container form__heading">Tambahkan Ulasan</h2>
         <div class="form">
-            <label for="name">Nama:</label><br />
-            <input maxlength="25" type="text" id="name" name="fname" /><br />
-            <label for="review">Pendapat:</label><br />
+            <label for="name">Nama:</label>
+            <input maxlength="25" type="text" id="name" name="fname" />
+            <label for="review">Pendapat:</label>
             <textarea
                 maxlength="90"
                 type="text"
