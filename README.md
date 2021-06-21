@@ -45,8 +45,8 @@ npm run start-dev
 
 ## Authors
 
-ex. Naufal Aulia 
-ex. [@auliamnaufal](https://twitter.com/auliamnaufal)
+Naufal Aulia 
+[@auliamnaufal](https://twitter.com/auliamnaufal)
 
 ## License
 
