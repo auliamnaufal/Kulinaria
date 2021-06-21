@@ -10,7 +10,7 @@ class HeroSection extends HTMLElement {
               <source media="(max-width: 600px)" type="image/webp" srcset="./public/images/hero-image_2-small.webp">
               <source media="(max-width: 600px)" type="image/jpeg" srcset="./public/images/hero-image_2-small.jpg">
               <source media="(min-width: 601px)" type="image/webp" srcset="./public/images/hero-image_2-large.webp">
-              <source media="(min-width: 601px)" type="image/jpg" srcset="./public/images/hero-image_2-large.jpg">
+              <source media="(min-width: 601px)" type="image/jpeg" srcset="./public/images/hero-image_2-large.jpg">
               <img src="./public/images/hero-image_2-large.jpg" alt="hero image">
             </picture>
             <div class="hero__content">
