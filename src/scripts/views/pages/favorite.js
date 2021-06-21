@@ -8,8 +8,10 @@ const Favorite = {
     return `
       <div class="hero">
         <picture class="hero--img">
-          <source media="(max-width: 600px)" type="image/jpg" srcset="./public/images/hero-image_2-small.jpg">
-          <img src="./public/images/hero-image_2-large.jpg" alt="hero image">
+            <source media="(max-width: 600px)" type="image/webp" srcset="./public/images/hero-image_2-small.webp">
+            <source media="(max-width: 600px)" type="image/jpeg" srcset="./public/images/hero-image_2-small.jpg">
+            <source media="(min-width: 601px)" type="image/webp" srcset="./public/images/hero-image_2-large.webp">
+            <source media="(min-width: 601px)" type="image/jpg" srcset="./public/images/hero-image_2-large.jpg">
         </picture>
         <div class="hero__content">
             <h2 class="hero__content--title favorite__header">Restoran Favorit</h2>
