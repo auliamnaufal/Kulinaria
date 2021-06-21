@@ -48,6 +48,10 @@ npm run start-dev
 ex. Naufal Aulia 
 ex. [@auliamnaufal](https://twitter.com/auliamnaufal)
 
+## License
+
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
+
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
