@@ -20,6 +20,8 @@
         "new-cap": "off",
         "no-alert": "off",
         "no-undef": "off",
+        "consistent-return": "off",
+        "no-prototype-builtins": "off"
 
     }
 }
