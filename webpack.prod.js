@@ -1,8 +1,7 @@
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -19,15 +18,15 @@ module.exports = merge(common, {
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
-          priority: -10
+          priority: -10,
         },
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true
-        }
-      }
-    }
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   module: {
     rules: [
@@ -45,5 +44,5 @@ module.exports = merge(common, {
       },
     ],
   },
-  plugins: [new CleanWebpackPlugin(), new BundleAnalyzerPlugin()]
+  plugins: [new CleanWebpackPlugin(), new BundleAnalyzerPlugin()],
 });
